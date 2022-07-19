@@ -26,17 +26,10 @@ a = "sad" ; b = "dsa" ; output = True
 
 class Solution:
     def anagram(self,a,b):
-        # check characters in a
-        a_list = []
-        b_list = []
-        for x in range(0, len(a)):
-            a_list.append(x)
-            for y in range(0, len(b)):
-                b_list.append(y)
-                if all(a_list) == b_list:
-                    return True
-                else:
-                    return False
+        if(sorted(a)== sorted(b)):
+            return True
+        else:
+            return False     
 
 
         # TODO: Write code below to return a bool with the solution to the prompt
